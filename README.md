@@ -27,7 +27,7 @@ This project is a secure authentication module built with Laravel. It includes:
 - POST /api/forgot-password — Send reset password email
 - POST /api/reset-password — Verify token & reset password
 
-# Reusable UI Components
+### Reusable UI Components
 - Blade layouts & components for consistent UI: 
     `layouts/layout.blade.php`
     `partials/alert.blade.php`
@@ -35,41 +35,41 @@ This project is a secure authentication module built with Laravel. It includes:
     `components/button.blade.php`
 - Layout theme customized with light yellow
 
-# Login Tracking
+### Login Tracking
 - Tracks each login event (timestamp, IP, browser, device)
 - Stored in `login_logs` table and displayed with pagination
 
-# Developer Utilities
+### Developer Utilities
 - Custom Artisan command: `php artisan user:create` - Quick user creation via CLI
 
-# Security Highlights
+### Security Highlights
 - Passwords are hashed using Bcrypt
 - CSRF tokens and input validation
 - Token-based API authentication via Sanctum (separates web & API)
 
 ## Get Started
 
-# Clone the repository
-git clone https://github.com/your-repo.git
-cd your-repo
+### Clone the repository
+- git clone https://github.com/your-repo.git
+- cd your-repo
 
-# Install dependencies
-composer install
+### Install dependencies
+- composer install
 
-# Setup .env and generate app key
-cp .env.example .env
-php artisan key:generate
+### Setup .env and generate app key
+- cp .env.example .env
+- php artisan key:generate
 
-# Configure your database settings in .env
-DB_DATABASE=your_db
-DB_USERNAME=your_user
-DB_PASSWORD=your_pass
+### Configure your database settings in .env
+- DB_DATABASE=your_db
+- DB_USERNAME=your_user
+- DB_PASSWORD=your_pass
 
-# Setup database
-php artisan migrate
+### Setup database
+- php artisan migrate
 
-# Run dev server
-php artisan serve
+### Run dev server
+- php artisan serve
 
 ## Set Up Gmail App Password (SMTP Email Testing)
 If you use Gmail for sending emails, you need to generate an App Password instead of using your real Gmail password.
