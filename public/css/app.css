@@ -1,0 +1,55 @@
+body {
+    background-color: #fffdf5;
+    color: #3c3c3c;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    background-color: #fce38a !important;
+}
+
+.navbar .nav-link {
+    color: #3c3c3c !important;
+}
+
+.btn-primary {
+    background-color: #f9d56e;
+    border-color: #f9d56e;
+    color: #3c3c3c;
+}
+
+.btn-primary:hover {
+    background-color: #fcd34d;
+    border-color: #fcd34d;
+}
+
+.card {
+    border-radius: 8px;
+    border: none;
+}
+
+.card-header {
+    background-color: #fff7d6;
+    font-weight: 600;
+    border: none;
+}
+
+.alert-success {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+footer {
+    background-color: #030303;
+    color: white;
+}
