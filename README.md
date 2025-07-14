@@ -25,7 +25,6 @@ This project is a secure authentication module built with Laravel. It includes:
 - POST /api/login — Login and return Bearer token
 - POST /api/logout — Logout and revoke token
 - POST /api/forgot-password — Send reset password email
-- POST /api/reset-password — Verify token & reset password
 
 ### Reusable UI Components
 - Blade layouts & components for consistent UI: 
@@ -46,6 +45,15 @@ This project is a secure authentication module built with Laravel. It includes:
 - Passwords are hashed using Bcrypt
 - CSRF tokens and input validation
 - Token-based API authentication via Sanctum (separates web & API)
+
+### Password Reset
+
+The password reset feature uses Laravel's built-in `PasswordBroker` service. 
+When a user submits a password reset request, the system generates a secure token and stores it in the `password_resets` table. An email is then sent to the user with a password reset link containing the token and email address.
+
+- The reset link redirects the user to a web form (`/reset-password/{token}?email=...`)
+- The web interface handles token validation and password reset
+- Token expiration and deletion are handled automatically by Laravel
 
 ## Get Started
 
@@ -107,3 +115,4 @@ Database
 - users: stores user credentials
 - login_logs: tracks login activity (IP, user agent)
 - sessions: tracks active user sessions
+- password_resets: store password reset token
